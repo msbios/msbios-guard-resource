@@ -23,8 +23,15 @@ return [
                 'drivers' => [
                     Entity::class => Module::class
                 ]
-            ]
-        ]
+            ],
+            'entity_resolver' => [
+                'orm_default' => [
+                    'resolvers' => [
+                        Entity\UserInterface::class => Entity\User::class
+                    ],
+                ],
+            ],
+        ],
     ],
 
     'service_manager' => [
