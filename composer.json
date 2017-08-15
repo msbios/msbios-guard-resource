@@ -44,6 +44,7 @@
       "@cs-check",
       "phpunit"
     ],
+    "alter": "./vendor/bin/doctrine-module orm:schema-tool:update --force",
     "commit": "git add . && git commit -a -m \"Lazy Composer Commiter\" && git push"
   }
 }
