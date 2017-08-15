@@ -14,7 +14,6 @@ use MSBios\Resource\Entity;
  * Class User
  * @package MSBios\Guard\Resource\Entity
  *
- * @ORM\Entity
  * @ORM\Table(name="acl_t_users")
  * @ORM\MappedSuperclass
  */
@@ -219,7 +218,6 @@ class User extends Entity implements UserInterface, IdentityInterface
     {
         $this->options = $options;
     }
-
 
     /**
      * @return mixed

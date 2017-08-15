@@ -34,7 +34,8 @@
     "zendframework/zend-test": "^3.1",
     "squizlabs/php_codesniffer": "^3.0",
     "msbios/resource": "^0.0.1",
-    "msbios/guard": "^0.0.9"
+    "msbios/guard": "^0.0.9",
+    "msbios/authentication": "^0.0.3"
   },
   "scripts": {
     "cs-check": "phpcs",
