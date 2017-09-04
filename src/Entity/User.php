@@ -81,14 +81,14 @@ class User extends Entity implements UserInterface, IdentityInterface
      * Many Users have Many Roles.
      *
      * @var ArrayCollection
-     * -ORM\ManyToMany(targetEntity="Role")
-     * -ORM\JoinTable(
+     * @ORM\ManyToMany(targetEntity="Role")
+     * @ORM\JoinTable(
      *     name="acl_t_users_roles",
      *     joinColumns={@ORM\JoinColumn(name="userid", referencedColumnName="id")},
      *     inverseJoinColumns={@ORM\JoinColumn(name="roleid", referencedColumnName="id")}
      * )
-     * @ORM\ManyToMany(targetEntity="Role", inversedBy="users")
-     * @ORM\JoinTable(name="acl_t_users_roles")
+     * -ORM\ManyToMany(targetEntity="Role", inversedBy="users")
+     * -ORM\JoinTable(name="acl_t_users_roles")
      */
     private $roles;
 

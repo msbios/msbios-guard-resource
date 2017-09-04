@@ -5,15 +5,16 @@
  */
 namespace MSBios\Guard\Resource\Form;
 
+use MSBios\Resource\Initializer\LazyFormAwareInterface;
 use Zend\Form\Element\Password;
 use Zend\Form\Element\Text;
 use Zend\Form\Form;
 
 /**
  * Class UserForm
- * @package MSBios\Resource\Form
+ * @package MSBios\Guard\Resource\Form
  */
-class UserForm extends Form
+class UserForm extends Form implements LazyFormAwareInterface
 {
     /**
      * UserForm constructor.
@@ -27,34 +28,22 @@ class UserForm extends Form
         $this->add([
             'type' => Text::class,
             'name' => 'username'
-        ]);
-
-        $this->add([
+        ])->add([
             'type' => Text::class,
             'name' => 'firstname'
-        ]);
-
-        $this->add([
+        ])->add([
             'type' => Text::class,
             'name' => 'lastname'
-        ]);
-
-        $this->add([
+        ])->add([
             'type' => Text::class,
             'name' => 'email'
-        ]);
-
-        $this->add([
+        ])->add([
             'type' => Password::class,
             'name' => 'password'
-        ]);
-
-        $this->add([
+        ])->add([
             'type' => Password::class,
             'name' => 'confirm'
-        ]);
-
-        $this->add([
+        ])->add([
             'type' => Text::class,
             'name' => 'state'
         ]);

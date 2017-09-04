@@ -6,11 +6,11 @@
 
 namespace MSBios\Guard\Resource\DBAL\Types;
 
-use MSBios\Resource\DBAL\Types\EnumType;
+use MSBios\Doctrine\DBAL\Types\EnumType;
 
 /**
  * Class RuleType
- * @package MSBios\Guard\Resource\Resource\DBAL\Types
+ * @package MSBios\Guard\Resource\DBAL\Types
  */
 class RuleType extends EnumType
 {

@@ -5,6 +5,9 @@
  */
 namespace MSBios\Guard\Resource;
 
+use DoctrineModule\Stdlib\Hydrator\DoctrineObject;
+use Zend\ServiceManager\Factory\InvokableFactory;
+
 return [
     'doctrine' => [
         'driver' => [
@@ -43,7 +46,7 @@ return [
 
     'form_elements' => [
         'factories' => [
-            Form\UserForm::class => \MSBios\Resource\Factory\LazyFormFactory::class
+            Form\UserForm::class => InvokableFactory::class
         ]
     ],
 
@@ -60,6 +63,9 @@ return [
         'factories' => [
             // some thing
         ],
+        'aliases' => [
+            Form\UserForm::class => DoctrineObject::class
+        ]
     ],
 
     \MSBios\Guard\Module::class => [
