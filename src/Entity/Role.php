@@ -60,24 +60,6 @@ class Role extends Entity
     private $name;
 
     /**
-     * Many Users have Many Roles.
-     *
-     * @var ArrayCollection
-     * -ORM\ManyToMany(targetEntity="MSBios\Guard\Resource\Entity\UserInterface")
-     * -ORM\JoinTable(
-     *     name="acl_t_users_roles",
-     *     joinColumns={@ORM\JoinColumn(name="userid", referencedColumnName="id")},
-     *     inverseJoinColumns={@ORM\JoinColumn(name="roleid", referencedColumnName="id")}
-     * )
-     *
-     * @ORM\ManyToMany(
-     *     targetEntity="MSBios\Guard\Resource\Entity\UserInterface",
-     *     mappedBy="roles"
-     * )
-     */
-    private $users;
-
-    /**
      * Role constructor.
      */
     public function __construct()
@@ -163,15 +145,5 @@ class Role extends Entity
     public function setName($name)
     {
         $this->name = $name;
-    }
-
-    public function getUsers()
-    {
-        return $this->users;
-    }
-
-    public function setUsers($users)
-    {
-        $this->users = $users;
     }
 }

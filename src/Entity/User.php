@@ -87,8 +87,11 @@ class User extends Entity implements UserInterface, IdentityInterface
      *     joinColumns={@ORM\JoinColumn(name="userid", referencedColumnName="id")},
      *     inverseJoinColumns={@ORM\JoinColumn(name="roleid", referencedColumnName="id")}
      * )
+<<<<<<< HEAD
      * -ORM\ManyToMany(targetEntity="Role", inversedBy="users")
      * -ORM\JoinTable(name="acl_t_users_roles")
+=======
+>>>>>>> 8513cb9945c53d5af5e2986c7f0e994245005fcd
      */
     private $roles;
 
