@@ -3,7 +3,7 @@
  * @access protected
  * @author Judzhin Miles <info[woof-woof]msbios.com>
  */
-namespace MSBios\Guard\Resource\Entity;
+namespace MSBios\Guard\Resource;
 
 use MSBios\Guard\Provider\RoleProviderInterface;
 

@@ -16,15 +16,8 @@ use Zend\Form\Form;
  */
 class UserForm extends Form implements LazyFormAwareInterface
 {
-    /**
-     * UserForm constructor.
-     * @param int|null|string $name
-     * @param array $options
-     */
-    public function __construct($name = __CLASS__, array $options = [])
+    public function init()
     {
-        parent::__construct($name, $options);
-
         $this->add([
             'type' => Text::class,
             'name' => 'username'

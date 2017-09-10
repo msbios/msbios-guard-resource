@@ -5,115 +5,58 @@
  */
 namespace MSBios\Guard\Resource\Entity;
 
-use Doctrine\Common\Collections\ArrayCollection;
-use Doctrine\ORM\Mapping as ORM;
 use MSBios\Authentication\IdentityInterface;
-use MSBios\Resource\Entity;
+use MSBios\Guard\Resource\UserInterface;
+use MSBios\Resource\Record;
 
 /**
  * Class User
  * @package MSBios\Guard\Resource\Entity
- *
- * @ORM\Table(name="acl_t_users")
- * @ORM\MappedSuperclass
  */
-class User extends Entity implements UserInterface, IdentityInterface
+class User extends Record implements UserInterface, IdentityInterface
 {
     /**
-     * @var integer
-     *
-     * @ORM\Column(name="id", type="integer", nullable=false)
-     * @ORM\Id
-     * @ORM\GeneratedValue(strategy="IDENTITY")
-     */
-    private $id;
-
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="username", type="string", length=200, nullable=false)
+     * @var
      */
     private $username;
 
     /**
-     * @var string
-     *
-     * @ORM\Column(name="firstname", type="string", length=200, nullable=false)
+     * @var
      */
     private $firstname;
 
     /**
-     * @var string
-     *
-     * @ORM\Column(name="lastname", type="string", length=200, nullable=false)
+     * @var
      */
     private $lastname;
 
     /**
-     * @var string
-     *
-     * @ORM\Column(name="email", type="string", length=200, nullable=false)
+     * @var
      */
     private $email;
 
     /**
-     * @var string
-     *
-     * @ORM\Column(name="password", type="string", length=200, nullable=true)
+     * @var
      */
     private $password;
 
     /**
      * @var string
-     *
-     * @ORM\Column(name="state", type="string", length=8, nullable=false)
      */
     private $state = 'ACTIVE';
 
     /**
-     * @var string
-     *
-     * @ORM\Column(name="options", type="json_array", nullable=true)
+     * @var array
      */
     private $options = [];
 
     /**
-     * Many Users have Many Roles.
-     *
-     * @var ArrayCollection
-     * @ORM\ManyToMany(targetEntity="Role")
-     * @ORM\JoinTable(
-     *     name="acl_t_users_roles",
-     *     joinColumns={@ORM\JoinColumn(name="userid", referencedColumnName="id")},
-     *     inverseJoinColumns={@ORM\JoinColumn(name="roleid", referencedColumnName="id")}
-     * )
-<<<<<<< HEAD
-     * -ORM\ManyToMany(targetEntity="Role", inversedBy="users")
-     * -ORM\JoinTable(name="acl_t_users_roles")
-=======
->>>>>>> 8513cb9945c53d5af5e2986c7f0e994245005fcd
+     * @var
      */
     private $roles;
 
     /**
-     * @return int
-     */
-    public function getId()
-    {
-        return $this->id;
-    }
-
-    /**
-     * @param int $id
-     */
-    public function setId($id = null)
-    {
-        $this->id = $id;
-        parent::setId($id);
-    }
-
-    /**
-     * @return string
+     * @return mixed
      */
     public function getUsername()
     {
@@ -209,7 +152,7 @@ class User extends Entity implements UserInterface, IdentityInterface
     }
 
     /**
-     * @return string
+     * @return array
      */
     public function getOptions()
     {
