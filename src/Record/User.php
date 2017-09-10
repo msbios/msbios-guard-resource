@@ -3,7 +3,7 @@
  * @access protected
  * @author Judzhin Miles <info[woof-woof]msbios.com>
  */
-namespace MSBios\Guard\Resource\Entity;
+namespace MSBios\Guard\Resource\Record;
 
 use MSBios\Authentication\IdentityInterface;
 use MSBios\Guard\Resource\UserInterface;
@@ -11,7 +11,7 @@ use MSBios\Resource\Record;
 
 /**
  * Class User
- * @package MSBios\Guard\Resource\Entity
+ * @package MSBios\Guard\Resource\Record
  */
 class User extends Record implements UserInterface, IdentityInterface
 {

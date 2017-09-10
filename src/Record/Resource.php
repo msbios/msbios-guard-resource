@@ -3,13 +3,13 @@
  * @access protected
  * @author Judzhin Miles <info[woof-woof]msbios.com>
  */
-namespace MSBios\Guard\Resource\Entity;
+namespace MSBios\Guard\Resource\Record;
 
 use MSBios\Resource\Record;
 
 /**
  * Class Resource
- * @package MSBios\Guard\Resource\Entity
+ * @package MSBios\Guard\Resource\Record
  */
 class Resource extends Record
 {
