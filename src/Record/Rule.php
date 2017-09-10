@@ -13,6 +13,12 @@ use MSBios\Resource\Record;
  */
 class Rule extends Record
 {
+    /** @const ACCESS_ALLOW */
+    const ACCESS_ALLOW = 'ALLOW';
+
+    /** @const ACCESS_DENY */
+    const ACCESS_DENY = 'DENY';
+
     /**
      * @var
      */
@@ -31,7 +37,7 @@ class Rule extends Record
     /**
      * @var string
      */
-    private $access = 'ALLOW';
+    private $access = self::ACCESS_ALLOW;
 
     /**
      * @var
