@@ -10,7 +10,8 @@ use Zend\ServiceManager\Factory\InvokableFactory;
 return [
     'form_elements' => [
         'factories' => [
-            Form\UserForm::class => InvokableFactory::class
+            Form\ResourceForm::class => InvokableFactory::class,
+            Form\UserForm::class => InvokableFactory::class,
         ]
     ],
 ];
