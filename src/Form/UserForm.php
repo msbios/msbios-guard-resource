@@ -5,6 +5,7 @@
  */
 namespace MSBios\Guard\Resource\Form;
 
+use MSBios\Guard\Resource\Form\Element\StateRadio;
 use MSBios\Resource\Initializer\LazyFormAwareInterface;
 use Zend\Form\Element\Password;
 use Zend\Form\Element\Text;
@@ -37,7 +38,7 @@ class UserForm extends Form implements LazyFormAwareInterface
             'type' => Password::class,
             'name' => 'confirm'
         ])->add([
-            'type' => Text::class,
+            'type' => StateRadio::class,
             'name' => 'state'
         ]);
     }
