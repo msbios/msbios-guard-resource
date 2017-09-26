@@ -5,20 +5,20 @@
  */
 namespace MSBios\Guard\Resource\Form\Element;
 
-use MSBios\Guard\Resource\Record\Rule;
+use MSBios\Guard\Resource\Record\User;
 use Zend\Form\Element\Radio;
 
 /**
- * Class AccessRadio
+ * Class StateRadio
  * @package MSBios\Guard\Resource\Form\Element
  */
-class AccessRadio extends Radio
+class StateRadio extends Radio
 {
     public function init()
     {
         $this->setValueOptions([
-            Rule::ACCESS_ALLOW => 'Allow',
-            Rule::ACCESS_DENY => 'Deny',
+            User::STATE_ACTIVE => 'Active',
+            User::STATE_INACTIVE => 'Inactive',
         ]);
     }
 }

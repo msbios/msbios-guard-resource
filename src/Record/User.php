@@ -40,10 +40,16 @@ class User extends Record implements UserInterface, IdentityInterface
      */
     private $password;
 
+    /** @const STATE_ACTIVE */
+    const STATE_ACTIVE = 'ACTIVE';
+
+    /** @const STATE_INACTIVE */
+    const STATE_INACTIVE = 'INACTIVE';
+
     /**
      * @var string
      */
-    private $state = 'ACTIVE';
+    private $state = self::STATE_ACTIVE;
 
     /**
      * @var array

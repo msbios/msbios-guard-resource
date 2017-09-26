@@ -43,5 +43,4 @@ class UserInputFilter extends InputFilter
             'required' => false
         ]);
     }
-
 }

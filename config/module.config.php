@@ -12,7 +12,8 @@ return [
 
     'input_filters' => [
         'factories' => [
-            InputFilter\UserInputFilter::class => InvokableFactory::class
+            InputFilter\UserInputFilter::class =>
+                InvokableFactory::class
         ],
         'aliases' => [
             Form\UserForm::class =>
@@ -23,13 +24,20 @@ return [
     'form_elements' => [
         'factories' => [
             // Forms
-            Form\ResourceForm::class => InvokableFactory::class,
-            Form\RoleForm::class => InvokableFactory::class,
-            Form\RuleForm::class => InvokableFactory::class,
-            Form\UserForm::class => InvokableFactory::class,
+            Form\ResourceForm::class =>
+                InvokableFactory::class,
+            Form\RoleForm::class =>
+                InvokableFactory::class,
+            Form\RuleForm::class =>
+                InvokableFactory::class,
+            Form\UserForm::class =>
+                InvokableFactory::class,
 
             // Elements
-            Form\Element\AccessRadio::class => InvokableFactory::class
+            Form\Element\AccessRadio::class =>
+                InvokableFactory::class,
+            Form\Element\StateRadio::class =>
+                InvokableFactory::class,
         ]
     ]
 ];
