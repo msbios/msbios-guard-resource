@@ -5,6 +5,7 @@
  */
 namespace MSBios\Guard\Resource\Form;
 
+use MSBios\Guard\Resource\Form\Element\AccessRadio;
 use MSBios\Resource\Initializer\LazyFormAwareInterface;
 use Zend\Form\Element\Text;
 use Zend\Form\Form;
@@ -21,7 +22,7 @@ class RuleForm extends Form implements LazyFormAwareInterface
             'type' => Text::class,
             'name' => 'name'
         ])->add([
-            'type' => Text::class,
+            'type' => AccessRadio::class,
             'name' => 'access'
         ]);
     }
