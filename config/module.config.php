@@ -24,6 +24,8 @@ return [
     'form_elements' => [
         'factories' => [
             // Forms
+            Form\PermissionForm::class =>
+                InvokableFactory::class,
             Form\ResourceForm::class =>
                 InvokableFactory::class,
             Form\RoleForm::class =>
