@@ -10,6 +10,7 @@ use MSBios\Db\TableGateway\TableGateway;
 use MSBios\Guard\Resource\Record\User;
 use MSBios\Guard\Resource\Table\UserTableGateway;
 use Zend\Db\Adapter\AdapterInterface;
+use Zend\Db\ResultSet\ResultSet;
 use Zend\Db\TableGateway\Feature\RowGatewayFeature;
 use Zend\ServiceManager\Factory\FactoryInterface;
 
@@ -30,11 +31,23 @@ class UserTagleGatewayFactory implements FactoryInterface
         /** @var AdapterInterface $adapter */
         $adapter = $container->get(AdapterInterface::class);
 
+        /** @var User $arrayObjectPrototype */
+        $arrayObjectPrototype = new User($adapter);
+
         /** @var RowGatewayFeature $feature */
-        $feature = new RowGatewayFeature(new User($adapter));
+        $feature = new RowGatewayFeature($arrayObjectPrototype);
+
+        /** @var  $resultSetPrototype */
+        $resultSetPrototype = new ResultSet();
+        $resultSetPrototype->setArrayObjectPrototype($arrayObjectPrototype);
 
         return new UserTableGateway(
-            new TableGateway('acl_t_users', $adapter, $feature)
+            new TableGateway(
+                'acl_t_users',
+                $adapter,
+                $feature,
+                $resultSetPrototype
+            )
         );
     }
 }

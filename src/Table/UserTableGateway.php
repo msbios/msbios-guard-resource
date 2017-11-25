@@ -14,4 +14,12 @@ use MSBios\Resource\Table\AbstractTableGateway;
  */
 class UserTableGateway extends AbstractTableGateway
 {
+    /**
+     * @param $username
+     * @return mixed
+     */
+    public function fetchOneByUsername($username)
+    {
+        return $this->tableGateway->getByUsername($username);
+    }
 }
