@@ -41,5 +41,12 @@ return [
             Form\Element\StateRadio::class =>
                 InvokableFactory::class,
         ]
+    ],
+
+    'table_manager' => [
+        'factories' => [
+            Table\UserTableGateway::class =>
+                Factory\UserTagleGatewayFactory::class
+        ]
     ]
 ];

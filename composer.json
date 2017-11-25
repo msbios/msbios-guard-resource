@@ -24,7 +24,9 @@
     }
   },
   "require-dev": {
-    "msbios/resource": "^1.0"
+    "msbios/resource": "^1.0",
+    "msbios/authentication": "^1.0",
+    "msbios/test": "^1.0"
   },
   "scripts": {
     "cs-check": "phpcs",
