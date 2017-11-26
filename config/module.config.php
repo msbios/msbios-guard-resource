@@ -45,8 +45,10 @@ return [
 
     'table_manager' => [
         'factories' => [
+            Table\RoleTableGateway::class =>
+                Factory\RoleTableGatewayFactory::class,
             Table\UserTableGateway::class =>
-                Factory\UserTagleGatewayFactory::class
+                Factory\UserTableGatewayFactory::class
         ]
     ]
 ];

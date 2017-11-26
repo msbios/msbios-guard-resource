@@ -51,15 +51,11 @@ class User extends Record implements UserInterface, IdentityInterface
      */
     private $state = self::STATE_ACTIVE;
 
-    /**
-     * @var array
-     */
+    /** @var array  */
     private $options = [];
 
-    /**
-     * @var
-     */
-    private $roles;
+    /** @var array */
+    private $roles = [];
 
     /**
      * @return mixed
@@ -174,10 +170,20 @@ class User extends Record implements UserInterface, IdentityInterface
     }
 
     /**
-     * @return mixed
+     * @return array
      */
     public function getRoles()
     {
         return $this->roles;
+    }
+
+    /**
+     * @param array $roles
+     * @return $this
+     */
+    public function setRoles(array $roles)
+    {
+        $this->roles = $roles;
+        return $this;
     }
 }
