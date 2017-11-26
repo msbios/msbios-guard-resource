@@ -14,8 +14,12 @@ use Zend\Form\Element\Radio;
  */
 class AccessRadio extends Radio
 {
+    /**
+     * @inheritdoc
+     */
     public function init()
     {
+        parent::init();
         $this->setValueOptions([
             Rule::ACCESS_ALLOW => 'Allow',
             Rule::ACCESS_DENY => 'Deny',

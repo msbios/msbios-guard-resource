@@ -14,8 +14,12 @@ use Zend\Form\Element\Radio;
  */
 class StateRadio extends Radio
 {
+    /**
+     * @inheritdoc
+     */
     public function init()
     {
+        parent::init();
         $this->setValueOptions([
             User::STATE_ACTIVE => 'Active',
             User::STATE_INACTIVE => 'Inactive',

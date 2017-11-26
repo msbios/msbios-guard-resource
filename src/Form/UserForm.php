@@ -6,7 +6,6 @@
 namespace MSBios\Guard\Resource\Form;
 
 use MSBios\Guard\Resource\Form\Element\StateRadio;
-use MSBios\Resource\Initializer\LazyFormAwareInterface;
 use Zend\Form\Element\Password;
 use Zend\Form\Element\Text;
 use Zend\Form\Form;
@@ -15,10 +14,14 @@ use Zend\Form\Form;
  * Class UserForm
  * @package MSBios\Guard\Resource\Form
  */
-class UserForm extends Form implements LazyFormAwareInterface
+class UserForm extends Form
 {
+    /**
+     * @inheritdoc
+     */
     public function init()
     {
+        parent::init();
         $this->add([
             'type' => Text::class,
             'name' => 'username'

@@ -358,16 +358,16 @@
         },
         {
             "name": "msbios/guard",
-            "version": "v1.0.5",
+            "version": "v1.0.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/msbios/msbios-guard.git",
-                "reference": "f6ef4d96853ce34e21c6dd1bd9c6e1a9dfaf5b9b"
+                "reference": "6a185a906d520f2e7e0ac6196b8608543fa5ad26"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/msbios/msbios-guard/zipball/f6ef4d96853ce34e21c6dd1bd9c6e1a9dfaf5b9b",
-                "reference": "f6ef4d96853ce34e21c6dd1bd9c6e1a9dfaf5b9b",
+                "url": "https://api.github.com/repos/msbios/msbios-guard/zipball/6a185a906d520f2e7e0ac6196b8608543fa5ad26",
+                "reference": "6a185a906d520f2e7e0ac6196b8608543fa5ad26",
                 "shasum": ""
             },
             "require": {
@@ -377,9 +377,7 @@
             "require-dev": {
                 "msbios/application": "^1.0",
                 "msbios/authentication": "^1.0",
-                "msbios/cpanel": "^1.0",
                 "msbios/debug": "^1.0",
-                "msbios/guard-cpanel": "^1.0",
                 "msbios/guard-resource": "^1.0",
                 "msbios/resource": "^1.0",
                 "msbios/test": "^1.0"
@@ -410,7 +408,7 @@
             "keywords": [
                 "php"
             ],
-            "time": "2017-11-25T14:31:54+00:00"
+            "time": "2017-11-26T18:49:50+00:00"
         },
         {
             "name": "msbios/json",
@@ -509,16 +507,16 @@
         },
         {
             "name": "msbios/resource",
-            "version": "v1.0.6",
+            "version": "v1.0.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/msbios/msbios-resource.git",
-                "reference": "359447a5a4baff8430feaca74a5fe04a069204dd"
+                "reference": "75300d748aa916ba66ad03484c5826efbf0db9ca"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/msbios/msbios-resource/zipball/359447a5a4baff8430feaca74a5fe04a069204dd",
-                "reference": "359447a5a4baff8430feaca74a5fe04a069204dd",
+                "url": "https://api.github.com/repos/msbios/msbios-resource/zipball/75300d748aa916ba66ad03484c5826efbf0db9ca",
+                "reference": "75300d748aa916ba66ad03484c5826efbf0db9ca",
                 "shasum": ""
             },
             "require": {
@@ -551,7 +549,7 @@
             "keywords": [
                 "php"
             ],
-            "time": "2017-11-25T14:04:07+00:00"
+            "time": "2017-11-26T19:34:01+00:00"
         },
         {
             "name": "msbios/stdlib",

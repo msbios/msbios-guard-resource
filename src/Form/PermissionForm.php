@@ -5,7 +5,6 @@
  */
 namespace MSBios\Guard\Resource\Form;
 
-use MSBios\Resource\Initializer\LazyFormAwareInterface;
 use Zend\Form\Element\Text;
 use Zend\Form\Form;
 
@@ -13,10 +12,14 @@ use Zend\Form\Form;
  * Class PermissionForm
  * @package MSBios\Guard\Resource\Form
  */
-class PermissionForm extends Form implements LazyFormAwareInterface
+class PermissionForm extends Form
 {
+    /**
+     * @inheritdoc
+     */
     public function init()
     {
+        parent::init();
         $this->add([
             'type' => Text::class,
             'name' => 'code'
