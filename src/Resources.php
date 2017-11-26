@@ -29,5 +29,5 @@ abstract class Resources extends Enum
     const USERS = 'acl_t_users';
 
     /** @const USER_ROLES */
-    const USER_ROLES = 'acl_t_user_roles';
+    const USER_ROLES = 'acl_t_users_roles';
 }

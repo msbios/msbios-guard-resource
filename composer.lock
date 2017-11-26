@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "6490ddb60ccdcc0c95def712f69ba548",
+    "content-hash": "bf0293cfc0903073cb72fd93fb2df719",
     "packages": [],
     "packages-dev": [
         {
@@ -207,16 +207,16 @@
         },
         {
             "name": "msbios/authentication",
-            "version": "v1.0.8",
+            "version": "v1.0.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/msbios/msbios-authentication.git",
-                "reference": "4ede6192966678aeae87f28334be17cfe447130b"
+                "reference": "bd129e4d042dacc8bc5f7e68f87eaf6b6dc75170"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/msbios/msbios-authentication/zipball/4ede6192966678aeae87f28334be17cfe447130b",
-                "reference": "4ede6192966678aeae87f28334be17cfe447130b",
+                "url": "https://api.github.com/repos/msbios/msbios-authentication/zipball/bd129e4d042dacc8bc5f7e68f87eaf6b6dc75170",
+                "reference": "bd129e4d042dacc8bc5f7e68f87eaf6b6dc75170",
                 "shasum": ""
             },
             "require": {
@@ -253,20 +253,20 @@
             "keywords": [
                 "php"
             ],
-            "time": "2017-11-24T16:26:07+00:00"
+            "time": "2017-11-26T14:37:08+00:00"
         },
         {
             "name": "msbios/db",
-            "version": "v1.0.0",
+            "version": "v1.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/msbios/msbios-db.git",
-                "reference": "f14468dda337fe3904a9ca50d5447c954081552a"
+                "reference": "356365733c1cffae5368f9165b6f450700f053fd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/msbios/msbios-db/zipball/f14468dda337fe3904a9ca50d5447c954081552a",
-                "reference": "f14468dda337fe3904a9ca50d5447c954081552a",
+                "url": "https://api.github.com/repos/msbios/msbios-db/zipball/356365733c1cffae5368f9165b6f450700f053fd",
+                "reference": "356365733c1cffae5368f9165b6f450700f053fd",
                 "shasum": ""
             },
             "require": {
@@ -277,6 +277,11 @@
                 "msbios/test": "^1.0"
             },
             "type": "library",
+            "extra": {
+                "zf": {
+                    "component": "MSBios\\Db"
+                }
+            },
             "autoload": {
                 "psr-4": {
                     "MSBios\\Db\\": "src/"
@@ -297,7 +302,7 @@
             "keywords": [
                 "php"
             ],
-            "time": "2017-11-25T13:39:00+00:00"
+            "time": "2017-11-25T16:39:11+00:00"
         },
         {
             "name": "msbios/form",
@@ -550,16 +555,16 @@
         },
         {
             "name": "msbios/stdlib",
-            "version": "v1.0.6",
+            "version": "v1.0.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/msbios/msbios-stdlib.git",
-                "reference": "18d5341793f82988c91d0d3da30636a1d69851b6"
+                "reference": "c687fea8209a20b1c49fbacb5a7bfbd3d83ef7f0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/msbios/msbios-stdlib/zipball/18d5341793f82988c91d0d3da30636a1d69851b6",
-                "reference": "18d5341793f82988c91d0d3da30636a1d69851b6",
+                "url": "https://api.github.com/repos/msbios/msbios-stdlib/zipball/c687fea8209a20b1c49fbacb5a7bfbd3d83ef7f0",
+                "reference": "c687fea8209a20b1c49fbacb5a7bfbd3d83ef7f0",
                 "shasum": ""
             },
             "require": {
@@ -594,7 +599,7 @@
             "keywords": [
                 "php"
             ],
-            "time": "2017-11-04T22:21:10+00:00"
+            "time": "2017-11-25T21:51:45+00:00"
         },
         {
             "name": "msbios/test",

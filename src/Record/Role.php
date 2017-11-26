@@ -13,40 +13,42 @@ use MSBios\Resource\Record;
  */
 class Role extends Record
 {
-    /**
-     * @var
-     */
-    private $parent;
+    ///**
+    // * @var
+    // */
+    //private $parent;
+    //
+    ///**
+    // * @var
+    // */
+    //private $children;
+    //
+    ///**
+    // * @var
+    // */
+    //private $code;
+    //
+    ///**
+    // * @var
+    // */
+    //private $name;
 
     /**
-     * @var
-     */
-    private $children;
-
-    /**
-     * @var
-     */
-    private $code;
-
-    /**
-     * @var
-     */
-    private $name;
-
-    /**
-     * @return Role
+     * @return mixed
      */
     public function getParent()
     {
-        return $this->parent;
+        return $this->getData('parent');
     }
 
     /**
-     * @param Role $parent
+     * @param $parent
+     * @return $this
      */
     public function setParent($parent)
     {
-        $this->parent = $parent;
+        $this->setData('parent', $parent);
+        return $this;
     }
 
     /**
@@ -54,15 +56,17 @@ class Role extends Record
      */
     public function getChildren()
     {
-        return $this->children;
+        return $this->getData('children');
     }
 
     /**
      * @param $children
+     * @return $this
      */
     public function setChildren($children)
     {
-        $this->children = $children;
+        $this->setData('children', $children);
+        return $this;
     }
 
     /**
@@ -70,15 +74,17 @@ class Role extends Record
      */
     public function getCode()
     {
-        return $this->code;
+        return $this->getData('code');
     }
 
     /**
      * @param $code
+     * @return $this
      */
     public function setCode($code)
     {
-        $this->code = $code;
+        $this->setData('code', $code);
+        return $this;
     }
 
     /**
@@ -86,14 +92,16 @@ class Role extends Record
      */
     public function getName()
     {
-        return $this->name;
+        return $this->getData('name');
     }
 
     /**
      * @param $name
+     * @return $this
      */
     public function setName($name)
     {
-        $this->name = $name;
+        $this->setData('name', $name);
+        return $this;
     }
 }
