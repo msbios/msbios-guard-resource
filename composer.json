@@ -1,7 +1,7 @@
 {
   "name": "msbios/guard-resource",
   "description": "MSBios Guard Resource",
-  "license": "GPL",
+  "license": "MIT",
   "keywords": [
     "php"
   ],
