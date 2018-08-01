@@ -20,6 +20,6 @@ class UserTableGateway extends AbstractTableGateway
      */
     public function fetchOneByUsername($username)
     {
-        return $this->tableGateway->getByUsername($username);
+        return $this->tableGateway->fetchByUsername($username);
     }
 }
