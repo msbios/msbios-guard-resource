@@ -6,13 +6,13 @@
 
 namespace MSBios\Guard\Resource\Table;
 
-use MSBios\Resource\Table\AbstractTableGateway;
+use MSBios\Resource\RecordRepository;
 
 /**
  * Class UserTableGateway
  * @package MSBios\Guard\Resource\Table
  */
-class UserTableGateway extends AbstractTableGateway
+class UserTableGateway extends RecordRepository
 {
     /**
      * @param $username

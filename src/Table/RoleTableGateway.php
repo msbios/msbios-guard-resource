@@ -8,14 +8,14 @@ namespace MSBios\Guard\Resource\Table;
 
 use MSBios\Guard\Resource\Resources;
 use MSBios\Guard\Resource\UserInterface;
-use MSBios\Resource\Table\AbstractTableGateway;
+use MSBios\Resource\RecordRepository;
 use Zend\Db\Sql\Select;
 
 /**
  * Class RoleTableGateway
  * @package MSBios\Guard\Resource\Table
  */
-class RoleTableGateway extends AbstractTableGateway
+class RoleTableGateway extends RecordRepository
 {
     /**
      * @param UserInterface $user

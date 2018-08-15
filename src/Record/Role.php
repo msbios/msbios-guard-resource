@@ -13,26 +13,6 @@ use MSBios\Resource\Record;
  */
 class Role extends Record
 {
-    ///**
-    // * @var
-    // */
-    //private $parent;
-    //
-    ///**
-    // * @var
-    // */
-    //private $children;
-    //
-    ///**
-    // * @var
-    // */
-    //private $code;
-    //
-    ///**
-    // * @var
-    // */
-    //private $name;
-
     /**
      * @return mixed
      */
