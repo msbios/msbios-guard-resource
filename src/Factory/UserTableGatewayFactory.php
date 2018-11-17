@@ -11,8 +11,6 @@ use MSBios\Guard\Resource\Record\User;
 use MSBios\Guard\Resource\Resources;
 use MSBios\Guard\Resource\Table\UserTableGateway;
 use Zend\Db\Adapter\AdapterInterface;
-use Zend\Db\ResultSet\ResultSet;
-use Zend\Db\ResultSet\ResultSetInterface;
 use Zend\Db\TableGateway\Feature\RowGatewayFeature;
 use Zend\ServiceManager\Factory\FactoryInterface;
 
@@ -26,29 +24,28 @@ class UserTableGatewayFactory implements FactoryInterface
      * @param ContainerInterface $container
      * @param string $requestedName
      * @param array|null $options
-     * @return UserTableGateway
+     * @return UserTableGateway|object
      */
     public function __invoke(ContainerInterface $container, $requestedName, array $options = null)
     {
         /** @var AdapterInterface $adapter */
         $adapter = $container->get(AdapterInterface::class);
 
-        /** @var User $arrayObjectPrototype */
-        $arrayObjectPrototype = new User($adapter);
+        /** @var User $record */
+        $record = new User('id', Resources::USERS, $adapter);
 
         /** @var RowGatewayFeature $feature */
-        $feature = new RowGatewayFeature($arrayObjectPrototype);
+        $feature = new RowGatewayFeature($record);
 
-        /** @var ResultSetInterface $resultSetPrototype */
-        $resultSetPrototype = new ResultSet;
-        $resultSetPrototype->setArrayObjectPrototype($arrayObjectPrototype);
+        // /** @var ResultSetInterface $resultSetPrototype */
+        // $resultSetPrototype = new ResultSet;
+        // $resultSetPrototype->setArrayObjectPrototype($record);
 
         return new UserTableGateway(
             new TableGateway(
                 Resources::USERS,
                 $adapter,
-                $feature,
-                $resultSetPrototype
+                $feature
             )
         );
     }

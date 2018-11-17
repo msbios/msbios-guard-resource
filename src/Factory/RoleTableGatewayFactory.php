@@ -11,8 +11,6 @@ use MSBios\Guard\Resource\Record\Role;
 use MSBios\Guard\Resource\Resources;
 use MSBios\Guard\Resource\Table\RoleTableGateway;
 use Zend\Db\Adapter\AdapterInterface;
-use Zend\Db\ResultSet\ResultSet;
-use Zend\Db\ResultSet\ResultSetInterface;
 use Zend\Db\TableGateway\Feature\RowGatewayFeature;
 use Zend\ServiceManager\Factory\FactoryInterface;
 
@@ -26,29 +24,28 @@ class RoleTableGatewayFactory implements FactoryInterface
      * @param ContainerInterface $container
      * @param string $requestedName
      * @param array|null $options
-     * @return RoleTableGateway
+     * @return RoleTableGateway|object
      */
     public function __invoke(ContainerInterface $container, $requestedName, array $options = null)
     {
         /** @var AdapterInterface $adapter */
         $adapter = $container->get(AdapterInterface::class);
 
-        /** @var Role $arrayObjectPrototype */
-        $arrayObjectPrototype = new Role($adapter);
+        /** @var Role $record */
+        $record = new Role('id', Resources::ROLES, $adapter);
 
         /** @var RowGatewayFeature $feature */
-        $feature = new RowGatewayFeature($arrayObjectPrototype);
+        $feature = new RowGatewayFeature($record);
 
-        /** @var ResultSetInterface $resultSetPrototype */
-        $resultSetPrototype = new ResultSet;
-        $resultSetPrototype->setArrayObjectPrototype($arrayObjectPrototype);
+        // /** @var ResultSetInterface $resultSetPrototype */
+        // $resultSetPrototype = new ResultSet;
+        // $resultSetPrototype->setArrayObjectPrototype($record);
 
-        return new RoleTableGateway(
+        return new $requestedName(
             new TableGateway(
                 Resources::ROLES,
                 $adapter,
-                $feature,
-                $resultSetPrototype
+                $feature
             )
         );
     }
