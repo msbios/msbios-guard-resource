@@ -13,13 +13,11 @@
       <path value="$PROJECT_DIR$/vendor/mockery/mockery" />
       <path value="$PROJECT_DIR$/vendor/phpunit/phpunit" />
       <path value="$PROJECT_DIR$/vendor/phpunit/php-code-coverage" />
-      <path value="$PROJECT_DIR$/vendor/phpunit/phpunit-mock-objects" />
       <path value="$PROJECT_DIR$/vendor/phpunit/php-token-stream" />
       <path value="$PROJECT_DIR$/vendor/phpunit/php-text-template" />
       <path value="$PROJECT_DIR$/vendor/phpunit/php-file-iterator" />
       <path value="$PROJECT_DIR$/vendor/phpunit/php-timer" />
       <path value="$PROJECT_DIR$/vendor/paragonie/random_compat" />
-      <path value="$PROJECT_DIR$/vendor/symfony/yaml" />
       <path value="$PROJECT_DIR$/vendor/zendframework/zend-view" />
       <path value="$PROJECT_DIR$/vendor/squizlabs/php_codesniffer" />
       <path value="$PROJECT_DIR$/vendor/phpspec/prophecy" />
@@ -69,6 +67,18 @@
       <path value="$PROJECT_DIR$/vendor/zendframework/zend-dom" />
       <path value="$PROJECT_DIR$/vendor/zendframework/zend-json" />
       <path value="$PROJECT_DIR$/vendor/zendframework/zend-config" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/object-reflector" />
+      <path value="$PROJECT_DIR$/vendor/msbios/validator" />
+      <path value="$PROJECT_DIR$/vendor/zendframework/zend-paginator" />
+      <path value="$PROJECT_DIR$/vendor/symfony/config" />
+      <path value="$PROJECT_DIR$/vendor/symfony/dependency-injection" />
+      <path value="$PROJECT_DIR$/vendor/symfony/filesystem" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-ctype" />
+      <path value="$PROJECT_DIR$/vendor/theseer/tokenizer" />
+      <path value="$PROJECT_DIR$/vendor/phar-io/version" />
+      <path value="$PROJECT_DIR$/vendor/phar-io/manifest" />
+      <path value="$PROJECT_DIR$/vendor/pdepend/pdepend" />
+      <path value="$PROJECT_DIR$/vendor/phpmd/phpmd" />
     </include_path>
   </component>
 </project>

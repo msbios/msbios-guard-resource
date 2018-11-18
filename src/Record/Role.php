@@ -18,7 +18,7 @@ class Role extends Record
      */
     public function getParent()
     {
-        return $this->getData('parent');
+        return $this['parent'];
     }
 
     /**
@@ -27,7 +27,7 @@ class Role extends Record
      */
     public function setParent($parent)
     {
-        $this->setData('parent', $parent);
+        $this['parent'] = $parent;
         return $this;
     }
 
@@ -36,7 +36,7 @@ class Role extends Record
      */
     public function getChildren()
     {
-        return $this->getData('children');
+        return $this['children'];
     }
 
     /**
@@ -45,7 +45,7 @@ class Role extends Record
      */
     public function setChildren($children)
     {
-        $this->setData('children', $children);
+        $this['children'] = $children;
         return $this;
     }
 
@@ -54,7 +54,7 @@ class Role extends Record
      */
     public function getCode()
     {
-        return $this->getData('code');
+        return $this['code'];
     }
 
     /**
@@ -63,7 +63,7 @@ class Role extends Record
      */
     public function setCode($code)
     {
-        $this->setData('code', $code);
+        $this['code'] = $code;
         return $this;
     }
 
@@ -72,7 +72,7 @@ class Role extends Record
      */
     public function getName()
     {
-        return $this->getData('name');
+        return $this['name'];
     }
 
     /**
@@ -81,7 +81,7 @@ class Role extends Record
      */
     public function setName($name)
     {
-        $this->setData('name', $name);
+        $this['name'] = $name;
         return $this;
     }
 }
